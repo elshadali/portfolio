@@ -16,7 +16,7 @@ def contact(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your request has been accepted, we will contact you soon')
-            return redirect(reverse("contact"))
+            return redirect("contact")
     context = {
         'contact': contact,
         'form': form,
